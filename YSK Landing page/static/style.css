@@ -1,0 +1,397 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* === Global Styles === */
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Section Cover === */
+.section-cover {
+  background-image: url('../media/cover-image.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .section-cover {
+    height: auto;
+    padding: 144px 0;
+    background-position: top;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-cover {
+    height: 600px;
+    padding: 40px 20px;
+    margin: 40px 0;
+    background-position: center top;
+  }
+}
+
+/* === Container and Swiper === */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.myswiper,
+.swiper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.slider-img {
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-img:hover {
+  transform: scale(1.05);
+}
+
+/* === Order Button Container === */
+.div_order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#order_btn {
+  width: 300px;
+  font-weight: bold;
+}
+
+/* === Social Buttons Styles === */
+.social-buttons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-btn {
+  min-width: 180px;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+  border-color: #25D366;
+  background-color: #25D366;
+}
+
+.whatsapp-btn:hover,
+.whatsapp-btn:focus,
+.whatsapp-btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.4);
+  outline: none;
+}
+
+.instagram_btn {
+  border-color: red;
+  background-color: red;
+}
+
+.instagram_btn:hover,
+.instagram_btn:focus,
+.instagram_btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(225, 48, 74, 0.725);
+  outline: none;
+}
+
+.facebook_btn {
+  border-color: blue;
+  background-color: blue;
+}
+
+.facebook_btn:hover,
+.facebook_btn:focus,
+.facebook_btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(35, 35, 201, 0.742);
+  outline: none;
+}
+
+/* === Responsive for Social Buttons === */
+@media (max-width: 768px) {
+  .social-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .social-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* === Form Styles === */
+form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  direction: rtl;
+  text-align: right;
+}
+
+.box {
+  max-width: 500px;
+  margin: auto;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.input {
+  text-align: right;
+  background-color: #ffffff !important;
+  color: #363636 !important;
+  border: 1px solid #dbdbdb;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input::placeholder {
+  color: #999999 !important;
+  opacity: 1 !important;
+}
+
+/* أيقونات الحقول داخل الفورم */
+.control .icon {
+  color: #999999 !important;
+  transition: color 0.3s ease;
+}
+
+/* عند التركيز على الحقل، يصبح لون الأيقونة أزرق */
+.input:focus,
+.textarea:focus,
+.select select:focus {
+  border-color: #2d6cdf !important;
+  box-shadow: 0 0 5px #2d6cdf !important;
+  outline: none;
+}
+
+/* تغيير لون الأيقونة عند التركيز على الحقل */
+.input:focus ~ .icon,
+.textarea:focus ~ .icon,
+.select select:focus ~ .icon {
+  color: #2d6cdf !important;
+}
+
+/* زر الإرسال */
+#submitBtn {
+  background-color: #00d1b2;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #00b89c;
+}
+
+/* === Footer Styles === */
+.footer {
+  background-color: #0a2e6e;
+  width: 100%;
+  color: #ffffff;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.social-icon.facebook {
+  color: #0e2ee2;
+}
+
+.social-icon.instagram {
+  color: #E1306C;
+}
+
+.social-icon.whatsapp {
+  color: #25D366;
+}
+
+.footer-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* === Responsive Images and Section Padding === */
+@media (max-width: 768px) {
+  .product-img {
+    max-width: 90%;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* === Overlay Message === */
+.overlay-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay-message.is-hidden {
+  display: none;
+}
+
+.message-box {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  max-width: 95%;
+  width: 500px;
+  font-size: 22px;
+  position: relative;
+  color: #363636;
+  animation: fadeIn 0.4s ease;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  transition: 0.3s;
+}
+
+.close-button:hover {
+  color: #ff3860;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* === Spinner === */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === Utility === */
+.is-hidden {
+  display: none !important;
+}
+
+.title {
+  color: #363636 !important;
+  font-weight: 700;
+}
+
+.label {
+  color: #4a4a4a !important;
+  font-weight: bold;
+}
